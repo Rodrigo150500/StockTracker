@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Generator</title>
+  <link rel="shortcut icon" href="{{url_for('static', filename='./assets/report-icon.png')}}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ url_for('static', filename='../../static/style.css') }}"></head>
+<body>
+  <header>
+    <h1>Gerar relatório</h1>
+  </header>
+
+  <main>
+
+    <form method="POST" enctype="multipart/form-data" action="/send_report">
+      <label for="file" class="label-file">Selecionar arquivo</label>
+      <input id="file" type="file" name="file" accept=".xls,.xlsx" required>
+
+
+      <button type="submit">Enviar</button>
+    </form>
+
+  </main>
+
+</body>
+</html>

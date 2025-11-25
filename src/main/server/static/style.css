@@ -1,0 +1,80 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: #0069d9;
+    width: 100%;
+    display: flex;
+    height: 80px;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0px;
+    justify-content: center;
+}
+
+header h1{
+  color: #fff;
+  font-size: 40px;
+}
+
+main{
+  width: 40%;
+  margin: 100px auto;
+  background-color: #36a2b3;
+  border-radius: 15px;
+  border: 2px solid #0d515c;
+  box-shadow: #0000006a 1px 1px;
+  
+}
+
+form{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+}
+
+input[type="file"]{
+  display: none;
+}
+
+.label-file{
+  background-color: #ffc107;
+  border: 2px solid #ffc107;
+  border-radius: 10px;
+  color: #000;
+  font-size: 28px;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.label-file:hover{
+    background-color: #d39f03;
+    border: 2px solid #d39f03}
+
+button{
+  width: 200px;
+  height: 75px;
+  font-size: 28px;
+  background-color: #28a745;
+  border: 2px solid #166d2a;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #18632a;
+  border: 2px solid #18632a;
+}
