@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-load_dotenv("dev.env")
+load_dotenv(".env")
 
 from .mongo_db_connection import mongo_db_connection
 
