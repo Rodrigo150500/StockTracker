@@ -24,7 +24,7 @@ class GenerateReportStockService(GenerateReportStockServiceInterface):
         self.__repository = repository
 
 
-    def generate_report(self, xlsx_file: FileStorage) -> dict:
+    def generate_report(self, xlsx_file: FileStorage) -> BytesIO:
 
         #Transform to csv file
         csv_file = self.__transform_to_csv_file(xlsx_file)
@@ -41,8 +41,7 @@ class GenerateReportStockService(GenerateReportStockServiceInterface):
         #Export to download
         files_to_download = self.__create_zip_file(products_buffer)
 
-        return HttpResponse(body=files_to_download, status_code=200)
-
+        return files_to_download
 
     def __transform_to_csv_file(self, xlsx_file) -> BytesIO:
 
